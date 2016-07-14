@@ -14,7 +14,7 @@
 
     <ion-list>
       <!-- TODO: Repeat the ion-item below for each turn -->
-      <ion-item class="row turn">
+      <ion-item class="row turn" >
 
         <div class="col col-10 text-center turn-num">
           <!-- TODO:
@@ -35,10 +35,10 @@
             to the currently selected icon.
           -->
           <div class="button-bar">
-            <button class="button button-icon icon //add-class-here"></button>
-            <button class="button button-icon icon //add-class-here"></button>
-            <button class="button button-icon icon //add-class-here"></button>
-            <button class="button button-icon icon //add-class-here"></button>
+            <button class="button button-icon icon {{icons[turn.choices[0]] || 'ion-more'}}" ng-click="turn.choices[0] = selectedIcon"></button>
+            <button class="button button-icon icon {{icons[turn.choices[1]] || 'ion-more'}}" ng-click="turn.choices[1] = selectedIcon"></button>
+            <button class="button button-icon icon {{icons[turn.choices[2]] || 'ion-more'}}" ng-click="turn.choices[2] = selectedIcon"></button>
+            <button class="button button-icon icon {{icons[turn.choices[3]] || 'ion-more'}}" ng-click="turn.choices[3] = selectedIcon"></button>
           </div>
         </div>
         <div class="col col-20 text-center left-border">
