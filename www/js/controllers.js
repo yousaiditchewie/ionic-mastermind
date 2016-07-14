@@ -9,7 +9,10 @@ angular.module('starter.controllers', [])
   // The current selected icon to assign to any clicked position.
   // TODO: Needs to be set when buttons in menu.html are clicked.
   $scope.selectedIcon = 0;
+  // Code to change icon into selected icon
+  function selectIcon() {
 
+  }
   // TODO: You're going to need a data structure to hold a list of "turns";
   // and those "turns" are likely going to be objects...
   $scope.randCode = function(min, max, arrSize) {
