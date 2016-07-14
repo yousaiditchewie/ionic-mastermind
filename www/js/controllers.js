@@ -2,6 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal) {
 
+  $scope.currentTurn = 0;
   // These icon classes are for mapping the selected guesses to the UI
   $scope.icons = ['ion-social-apple', 'ion-social-android','ion-social-angular','ion-social-html5'];
 

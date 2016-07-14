@@ -21,7 +21,7 @@
             Display turn number here (currently hard-coded to "1").
             Hint - gotta love that $index in a ng-repeat :)
           -->
-          1
+          {{currentTurn}}
         </div>
         <div class="col text-center left-border">
           <!-- TODO:
@@ -46,7 +46,7 @@
             <!-- TODO:
               If this turn is the current turn, display a [score] button
               that's disabled unless an icon has been chosen for all positions.
-              
+
               If not current turn, display the score for turn.
               The score should show a <div> with a class of 'perfect'
               for each position with correct icon and position
