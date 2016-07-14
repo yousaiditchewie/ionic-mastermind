@@ -6,6 +6,11 @@ angular.module('starter.controllers', [])
   // These icon classes are for mapping the selected guesses to the UI
   $scope.icons = ['ion-social-apple', 'ion-social-android','ion-social-angular','ion-social-html5'];
   $scope.secretCode = [];
+  $scope.allTurns = [];
+
+  $scope.turn = {
+    choices: []
+  };
   // The current selected icon to assign to any clicked position.
   // TODO: Needs to be set when buttons in menu.html are clicked.
   $scope.selectedIcon = 0;
@@ -39,9 +44,12 @@ angular.module('starter.controllers', [])
   */
   $scope.scoreTurn = function() {
     // TODO: Score the turn
+    $scope.allTurns.push($scope.turn.choices);
+    console.log($scope.allTurns);
 
     // TODO: Show winModal IF turn is correct. Put line below in an if statement.
     // $scope.winModal.show();
+    $scope.turn.choices = [];
   };
 
 
