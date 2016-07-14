@@ -23,7 +23,8 @@ angular.module('starter.controllers', [])
 
   // Initialize game state
   $scope.newGame = function() {
-    $scope.randCode(0, 4, 4);
+    $scope.randCode(1, 4, 4);
+    $scope.currentTurn = 0;
     // TODO: Set all data properties/structures to their beginning state
 
   };
