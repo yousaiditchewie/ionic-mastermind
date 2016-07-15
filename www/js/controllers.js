@@ -8,8 +8,10 @@ angular.module('starter.controllers', [])
   $scope.secretCode = [];
   $scope.allTurns = [];
 
-  $scope.turn = {
-    choices: []
+  function Turn() {
+    this.choices= [null, null, null, null];
+    this.perfect= 0;
+    this.almost= 0;
   };
   // The current selected icon to assign to any clicked position.
   // TODO: Needs to be set when buttons in menu.html are clicked.
@@ -30,7 +32,7 @@ angular.module('starter.controllers', [])
     $scope.randCode(1, 4, 4);
     $scope.currentTurn = 0;
     // TODO: Set all data properties/structures to their beginning state
-
+    $scope.allTurns.push(new Turn());
   };
 
   // Run newGame() upon loading
@@ -44,12 +46,15 @@ angular.module('starter.controllers', [])
   */
   $scope.scoreTurn = function() {
     // TODO: Score the turn
-    $scope.allTurns.push($scope.turn.choices);
+
+    $scope.allTurns.push(new Turn());
+    // $scope.allTurns.push($scope.turn.choices);
     console.log($scope.allTurns);
+
 
     // TODO: Show winModal IF turn is correct. Put line below in an if statement.
     // $scope.winModal.show();
-    $scope.turn.choices = [];
+    // $scope.turn.correcthoices = [];
   };
 
 
